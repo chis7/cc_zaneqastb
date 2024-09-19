@@ -1,3 +1,3 @@
-from . import zaneqasTbXpertEqaResultsWizard
-from . import zaneqasTbXpertEqaResultsWizardErrorCodeLines
-from . import zaneqasTbXpertEqaResultsWizardLines
+from . import createApplicationForAUthorityToStudy
+from . import createTraineePostTrainingEvaluation
+from . import createSupervisorPostTrainingEvaluation

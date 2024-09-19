@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <!--    <template id="assets_backend" name="zaneqas_tb assets" inherit_id="web.assets_backend">-->
+    <!--        <xpath expr="." position="inside">-->
+    <!--            <script type="text/javascript" src="/static/src/js/restrict_selection.js"></script>-->
+    <!--        </xpath>-->
+    <!--    </template>-->
 
     <record id="zaneqas_tb_xpert_eqa_results_tree" model="ir.ui.view">
         <field name="name">zaneqas.tb.xpert.eqa.result.tree</field>
@@ -7,24 +12,13 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
-                <field name="company_name"/>
+                <field name="date_results_received_at_CDL"/>
                 <field name="date_panel_received"/>
+                <field name="date_panel_reported"/>
                 <field name="xpert_assay_used"/>
                 <field name="state"/>
             </tree>
 
-        </field>
-    </record>
-    <record id="zaneqas_tb_xpert_eqa_results_tree_non_admin" model="ir.ui.view">
-        <field name="name">zaneqas.tb.xpert.eqa.result.tree.non.admin</field>
-        <field name="model">zaneqas.tb.xpert.eqa.result</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="company_name"/>
-                <field name="date_panel_received"/>
-                <field name="state"/>
-            </tree>
         </field>
     </record>
 
@@ -45,32 +39,21 @@
                             context="{'validate_analytic': True}"
                             invisible="state != 'draft' "/>
                     <button name="action_supervisor_approve_eqa_result" data-hotkey="v"
-                            groups="zaneqas_tb.group_supervisor_approve_site_eqa_results"
                             confirm="Are you sure you want to make this approval?"
                             string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'supervisor' "/>
                     <button name="action_supervisor_send_back_eqa_result" data-hotkey="v"
-                            groups="zaneqas_tb.group_supervisor_approve_site_eqa_results"
                             confirm="Are you sure you want to send back?"
                             string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'supervisor' "/>
                     <button name="action_LabIncharge_approve_eqa_result" data-hotkey="v"
-                            groups="zaneqas_tb.group_labIncharge_approve_site_eqa_results"
                             confirm="Are you sure you want to make this approval?"
                             string="Approve" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'lab_incharge' "/>
                     <button name="action_LabIncharge_send_back_eqa_result" data-hotkey="v"
-                            groups="zaneqas_tb.group_labIncharge_approve_site_eqa_results"
                             confirm="Are you sure you want to send back?"
                             string="Send Back" class="btn-primary" type="object" context="{'validate_analytic': True}"
                             invisible="state != 'lab_incharge' "/>
-                    <field name="state_of_cycle" invisible="1"/>
-                    <!-- Print Button -->
-                    <button name="print_report" type="object" string="Print"
-                            class="oe_highlight"
-                            invisible="state_of_cycle != 'resultsPublished'"/>
-
-                    <!-- Other form fields -->
 
                     <field name="state" context="{'validate_analytic': True}" widget="statusbar"
                            statusbar_visible="draft,supervisor,lab_incharge,approved"
@@ -89,19 +72,19 @@
 
                         </h3>
                     </div>
-                    <!--<widget name="web_ribbon" title="Approved" bg_color="bg-success"/>-->
+<!--<widget name="web_ribbon" title="Approved" bg_color="bg-success"/>-->
                     <group>
                         <group>
-                            <field name="name" domain="[('state', '=', 'approved')]"/>
+                            <field name="name"/>
                             <field name="date_panel_received"/>
-                            <field name="date_of_last_gene_xpert_instrument_calibration_or_installation"/>
+                            <field name="date_panel_reported"/>
+                            <field name="xpert_assay_used"/>
                         </group>
                         <group>
-                            <field name="xpert_assay_used" domain="[('state', '=', 'approved')]"/>
-                            <field name="expiry_date"/>
+                            <field name="date_of_last_gene_xpert_instrument_calibration_or_installation"/>
                             <field name="catridge_lot_number"/>
+                            <field name="expiry_date"/>
                         </group>
-
                         <br/>
                         <br/>
                     </group>
@@ -122,13 +105,13 @@
                             <field name="zaneqas_tb_xpert_eqa_result_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1" force_save="1"/>
-                                    <field name="facility_result_date_tested"/>
-                                    <field name="facility_result_tb_detection_not_detected"/>
-                                    <field name="facility_result_tb_detection_trace"/>
-                                    <field name="facility_result_tb_detection_very_low"/>
-                                    <field name="facility_result_tb_detection_low"/>
-                                    <field name="facility_result_tb_detection_medium"/>
-                                    <field name="facility_result_tb_detection_high"/>
+                                    <field name="date_tested"/>
+                                    <field name="tb_detection_not_detected"/>
+                                    <field name="tb_detection_trace"/>
+                                    <field name="tb_detection_very_low"/>
+                                    <field name="tb_detection_low"/>
+                                    <field name="tb_detection_medium"/>
+                                    <field name="tb_detection_high"/>
                                 </tree>
                             </field>
                         </page>
@@ -136,10 +119,10 @@
                             <field name="zaneqas_tb_xpert_eqa_result_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1" force_save="1"/>
-                                    <field name="facility_result_rif_na"/>
-                                    <field name="facility_result_rif_not_detected"/>
-                                    <field name="facility_result_rif_detected"/>
-                                    <field name="facility_result_rif_indeterminate"/>
+                                    <field name="rif_na"/>
+                                    <field name="rif_not_detected"/>
+                                    <field name="rif_detected"/>
+                                    <field name="rif_indeterminate"/>
 
                                 </tree>
                             </field>
@@ -148,11 +131,11 @@
                             <field name="zaneqas_tb_xpert_eqa_result_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1" force_save="1"/>
-                                    <field name="facility_result_uninterpretable_invalid"/>
-                                    <field name="facility_result_uninterpretable_no_result"/>
-                                    <field name="facility_result_uninterpretable_error"/>
-                                    <field name="facility_result_uninterpretable_indeterminate"/>
-                                    <field name="facility_result_uninterpretable_error_code"/>
+                                    <field name="uninterpretable_invalid"/>
+                                    <field name="uninterpretable_no_result"/>
+                                    <field name="uninterpretable_error"/>
+                                    <field name="uninterpretable_indeterminate"/>
+                                    <field name="uninterpretable_error_code"/>
                                 </tree>
                             </field>
                         </page>
@@ -160,13 +143,13 @@
                             <field name="zaneqas_tb_xpert_eqa_result_ids">
                                 <tree editable="top" create="0" delete="0">
                                     <field name="sample_id" readonly="1" force_save="1"/>
-                                    <field name="facility_result_ct_probe_d_ultra_spsc"/>
-                                    <field name="facility_result_ct_probe_c_is1081_is6110"/>
-                                    <field name="facility_result_ct_probe_e_rpob2"/>
-                                    <field name="facility_result_ct_probe_b_rpoB1"/>
-                                    <field name="facility_result_ct_spc_rpoB3"/>
-                                    <field name="facility_result_ct_probe_a_rpob4"/>
-                                    <field name="facility_result_ct_xpert_module_number"/>
+                                    <field name="ct_probe_d_ultra_spsc"/>
+                                    <field name="ct_probe_c_is1081_is6110"/>
+                                    <field name="ct_probe_e_rpob2"/>
+                                    <field name="ct_probe_b_rpoB1"/>
+                                    <field name="ct_spc_rpoB3"/>
+                                    <field name="ct_probe_a_rpob4"/>
+                                    <field name="ct_xpert_module_number"/>
                                 </tree>
                             </field>
                         </page>
@@ -185,6 +168,9 @@
                             <field name="add_infor_gene_xpert_serial_number"/>
                             <field name="add_infor_date_gene_xpert_instrument_installed"/>
                             <field name="add_infor_instrument_user"/>
+                            <field name="add_infor_supervisor_review_panel_results"/>
+                            <field name="declaration_laboratory_in_charge"/>
+                            <field name="declaration_laboratory_in_charge_date"/>
                         </group>
                     </group>
                     <notebook>
