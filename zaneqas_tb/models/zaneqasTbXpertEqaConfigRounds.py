@@ -25,17 +25,18 @@ class ZaneqasTbXpertEqaConfigRounds(models.Model):
     )
 
     def action_save_eqa_config_round_as_draft(self):
-        current_year = datetime.now().year
         self.write({
-            'state': 'draft',
-            'name': f"{current_year} {self.name}"
+            'state': 'draft'
         })
 
     def action_submit_eqa_config_round_to_supervisor(self):
         self.write({'state': 'supervisor'})
 
     def action_supervisor_approve_eqa_config_round(self):
-        self.write({'state': 'Approved'})
+        current_year = datetime.now().year
+        self.write({'state': 'approved',
+                    'name': f"{current_year} {self.name}"
+                    })
 
     def action_supervisor_send_back_eqa_config_round(self):
         self.write({'state': 'draft'})
