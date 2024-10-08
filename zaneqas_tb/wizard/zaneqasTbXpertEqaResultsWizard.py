@@ -2,7 +2,6 @@
 from datetime import datetime, date
 
 from odoo import api, fields, models, _, SUPERUSER_ID
-
 from odoo.exceptions import UserError, ValidationError
 import random
 
@@ -12,91 +11,111 @@ class ZaneqasTbXpertEqaResultsWizard(models.TransientModel):
     _inherit = ["mail.thread"]
     _description = "zaneqas tb xpert eqa results"
 
-    name = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result', string='Name')
-    due_date = fields.Date(string='Due Date')
-    state = fields.Selection([
-        ("draft", "Draft"),
-        ("supervisor", "Supervisor"),
-        ("approved", "Approved"),
-        ("open", "Open"),
-        ("extended", "Extended"),
-        ("closed", "Closed"),
-        ("resultsPublished", "Results Published"),
-    ], string='State')
-    sample_id = fields.Char(string="Sample ID", store=True)
-    tb_detection_not_detected = fields.Boolean(string="Not Detected", store=True)
-    tb_detection_trace = fields.Boolean(string="Trace", store=True)
-    tb_detection_very_low = fields.Boolean(string="Very Low", store=True)
-    tb_detection_low = fields.Boolean(string="Low", store=True)
-    tb_detection_medium = fields.Boolean(string="Medium", store=True)
-    tb_detection_high = fields.Boolean(string="High", store=True)
-    rif_na = fields.Boolean(string="N/A", store=True)
-    rif_not_detected = fields.Boolean(string="Not Detected", store=True)
-    rif_detected = fields.Boolean(string="Detected", store=True)
-    rif_indeterminate = fields.Boolean(string="Indeterminate", store=True)
-    uninterpretable_invalid = fields.Boolean(string="Invalid", store=True)
-    uninterpretable_no_result = fields.Boolean(string="No Result", store=True)
-    uninterpretable_error = fields.Boolean(string="Error", store=True)
-    uninterpretable_indeterminate = fields.Boolean(string="Indeterminate", store=True)
-    uninterpretable_error_code = fields.Char(string="Error Code", store=True)
-    ct_probe_d_ultra_spsc = fields.Float(string="Probe D/Ultra SPC", store=True)
-    ct_probe_c_is1081_is6110 = fields.Float(string="Probe C/IS1081-IS6110", store=True)
-    ct_probe_e_rpob2 = fields.Float(string="Probe E/rpoB2", store=True)
-    ct_probe_b_rpoB1 = fields.Float(string="Probe B/rpoB1", store=True)
-    ct_spc_rpoB3 = fields.Float(string="SPC/rpoB3", store=True)
-    ct_probe_a_rpob4 = fields.Float(string="Probe A/rpoB4", store=True)
-    ct_xpert_module_number = fields.Char(string="Xpert Module Number", store=True)
-    # zaneqas_tb_xpert_eqa_expected_result_ids = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result',
-    #                                                            string="zaneqas tb xpert eqa result", store=True)
-    # zaneqas_tb_xpert_eqa_expected_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result',
-    #                                                           string="zaneqas tb xpert eqa result", store=True)
+    name = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result', string="Cycle")
+    site_id = fields.Many2one('res.partner', string='Name of Site')
+    lab_code = fields.Char(string='Lab Code')
+    site_contact_person = fields.Char(string='Site Contact Person')
+    contact_email = fields.Char(string='Contact Email')
+    date_panel_received = fields.Date(string='Date Panel Received', required=True)
+    date_of_last_gene_xpert_instrument_calibration_or_installation = fields.Date(
+        string="Date of Last GeneXpert Instrument Calibration or Installation", required=True)
+    xpert_assay_used = fields.Many2one('zaneqas.tb.xpert.eqa.config.assays', required=True)
+    catridge_lot_number = fields.Char(string='Xpert MTB/RIF or Ultra Cartridge or Pouch Lot No:', required=True)
+    expiry_date = fields.Date(string='Xpert MTB/RIF or Ultra Cartridge or Pouch Expiry Date', required=True)
+    comments = fields.Text(string='Comments')
+    date_results_received_at_CDL = fields.Date(string='Date Results Received at CDL')
+    add_infor_number_of_tests_conducted_in_last_full_month = fields.Integer(
+        string="How many Xpert tests have been conducted in the last full month?", required=True, store=True)
+    add_infor_number_of_errors_occurred = fields.Integer(
+        string="How many errors occurred during testing in the past full month?", required=True, store=True)
+    add_infor_was_monthly_maintenance_done_for_the_genexpert = fields.Selection(selection=[
+        ('yes', 'Yes'),
+        ('no', 'No'),
+    ], string="Was monthly maintenance done for the GeneXpert?", required=True, store=True)
+    add_infor_monthly_maintenance_done_by_date = fields.Date(string="Monthly maintenance done by Date", required=True,
+                                                             store=True)
+    add_infor_monthly_maintenance_done_by_technologist = fields.Char(string="Monthly maintenance done by technologist",
+                                                                     required=True, store=True)
+    add_infor_gene_xpert_serial_number = fields.Char(string="GeneXpert Serial Number", required=True, store=True)
+    add_infor_date_gene_xpert_instrument_installed = fields.Date(string="Date GeneXpert Instrument Installed",
+                                                                 required=True, store=True)
+    add_infor_instrument_user = fields.Char(string="Instrument User (Tester)", required=True, store=True)
+    declaration_testing_personnel = fields.Char(string="Testing Personnel", store=True)
+    declaration_testing_personnel_date = fields.Date(string="Date", store=True)
+    company_id = fields.Many2one('res.company', string="Company", required=True, default=lambda self: self.env.company)
 
-    facility_result_date_tested = fields.Date(string="Date Tested", store=True)
-    facility_result_tb_detection_not_detected = fields.Boolean(string="Not Detected", store=True)
-    facility_result_tb_detection_trace = fields.Boolean(string="Trace", store=True)
-    facility_result_tb_detection_very_low = fields.Boolean(string="Very Low", store=True)
-    facility_result_tb_detection_low = fields.Boolean(string="Low", store=True)
-    facility_result_tb_detection_medium = fields.Boolean(string="Medium", store=True)
-    facility_result_tb_detection_high = fields.Boolean(string="High", store=True)
-    facility_result_rif_na = fields.Boolean(string="N/A", store=True)
-    facility_result_rif_not_detected = fields.Boolean(string="Not Detected", store=True)
-    facility_result_rif_detected = fields.Boolean(string="Detected", store=True)
-    facility_result_rif_indeterminate = fields.Boolean(string="Indeterminate", store=True)
-    facility_result_uninterpretable_invalid = fields.Boolean(string="Invalid", store=True)
-    facility_result_uninterpretable_no_result = fields.Boolean(string="No Result", store=True)
-    facility_result_uninterpretable_error = fields.Boolean(string="Error", store=True)
-    facility_result_uninterpretable_indeterminate = fields.Boolean(string="Indeterminate", store=True)
-    facility_result_uninterpretable_error_code = fields.Char(string="Error Code", store=True)
-    facility_result_ct_probe_d_ultra_spsc = fields.Float(string="Probe D/Ultra SPC", store=True)
-    facility_result_ct_probe_c_is1081_is6110 = fields.Float(string="Probe C/IS1081-IS6110", store=True)
-    facility_result_ct_probe_e_rpob2 = fields.Float(string="Probe E/rpoB2", store=True)
-    facility_result_ct_probe_b_rpoB1 = fields.Float(string="Probe B/rpoB1", store=True)
-    facility_result_ct_spc_rpoB3 = fields.Float(string="SPC/rpoB3", store=True)
-    facility_result_ct_probe_a_rpob4 = fields.Float(string="Probe A/rpoB4", store=True)
-    facility_result_ct_xpert_module_number = fields.Char(string="Xpert Module Number", store=True)
+    zaneqas_tb_xpert_eqa_facility_result_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result', string="facility eqa result", store=True)
+
+
+    zaneqas_tb_xpert_eqa_result_wizard_error_code_ids = fields.One2many('zaneqas.tb.xpert.eqa.result.wizard.error.code.lines',
+                                                                 'zaneqas_tb_xpert_eqa_result_wizard_error_code_id',
+                                                                 string="ZANEQAS TB Xpert EQA Results Error Code Lines")
+    zaneqas_tb_xpert_eqa_result_wizard_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.result.wizard.lines',
+        'zaneqas_tb_xpert_eqa_result_wizard_id',
+        string="ZANEQAS TB Xpert EQA Results Wizard Lines"
+    )
+
+
+
+    state = fields.Selection(
+        selection=[
+            ("draft", "Draft"),
+            ("supervisor", "Supervisor"),
+            ("lab_incharge", "Lab Incharge"),
+            ("approved", "Approved"),
+        ],
+        default='draft',
+        string="Status",
+        required=True,
+        tracking=True
+    )
+    expected_result_lines_ids = fields.One2many(
+        'zaneqas.tb.xpert.eqa.expected.result.lines', 'zaneqas_tb_xpert_eqa_expected_result_id',
+        string='Expected Results'
+    )
+
+    supervisor_comment = fields.Text(string="Supervisor Comment", tracking=True)
+    lab_incharge_comment = fields.Text(string="Lab Incharge Comment", tracking=True)
+    results_status = fields.Char(string="Results Status", compute="_compute_results_status")
+    company_name = fields.Char(string='Company Name', compute='_compute_company_name')
+    state_of_cycle = fields.Selection(
+        related='name.state',
+        string="State of Cycle",
+        readonly=True,
+        store=True
+    )
 
     @api.model
     def default_get(self, fields):
         res = super(ZaneqasTbXpertEqaResultsWizard, self).default_get(fields)
-        sample_ids = []
         active_id = self.env.context.get('active_id')
         if active_id:
-            record = self.env['zaneqas.tb.xpert.eqa.expected.result'].browse(active_id)
-            samples = self.env['zaneqas.tb.xpert.eqa.expected.result.lines'].search(
-                [('zaneqas_tb_xpert_eqa_expected_result_id', '=', record.id)])
-            for sample in samples:
-                sample_ids.append(sample.sample_id)
-
-            res.update({
-                'name': record.id,
-                'due_date': record.due_date,
-                'state': record.state,
-                'sample_id': [(6, 0, sample_ids)],
-            })
-        else:
-            raise UserError(_("Record does not exist"))
+            expected_result = self.env['zaneqas.tb.xpert.eqa.expected.result'].browse(active_id)
+            if expected_result:
+                eqa_round = expected_result.id
+                expected_result_lines = self.env['zaneqas.tb.xpert.eqa.expected.result.lines'].search([
+                    ('zaneqas_tb_xpert_eqa_expected_result_id', '=', eqa_round)
+                ])
+                res['expected_result_lines_ids'] = [(6, 0, expected_result_lines.ids)]
         return res
 
-    def action_submit_results(self):
+    # sample_id = fields.Many2one('zaneqas.tb.xpert.eqa.expected.result.lines', string='Sample')
+    # @api.model
+    # def default_get(self, fields):
+    #     res = super(ZaneqasTbXpertEqaResultsWizard, self).default_get(fields)
+    #     active_id = self.env.context.get('active_id')
+    #     if active_id:
+    #         expected_result = self.env['zaneqas.tb.xpert.eqa.expected.result'].browse(active_id)
+    #         if expected_result:
+    #             eqa_round = expected_result.id
+    #             expected_result_lines = self.env['zaneqas.tb.xpert.eqa.expected.result.lines'].search([
+    #                 ('zaneqas_tb_xpert_eqa_expected_result_id', '=', eqa_round)
+    #             ])
+    #             sample_ids = expected_result_lines.mapped('sample_id')
+    #             res['sample_id'] = sample_ids
+    #     return res
+
+    def action_submit(self):
         # Implement the logic for submitting results
         pass
