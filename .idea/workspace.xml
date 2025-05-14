@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="62d1e3f0-886e-4056-873f-a7b089b3fb6e" name="Changes" comment="syncing with repo" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="chis7 &lt;chisenga.musonda@yahoo.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sync-to-repo_dev" />
+        <entry key="$PROJECT_DIR$/zaneqas_addons" value="new-version" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="2315f4af-7e16-4ac1-bfa7-ffa4fd16ded0" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/chis7/cc_zaneqastb&quot;,
+    &quot;accountId&quot;: &quot;2315f4af-7e16-4ac1-bfa7-ffa4fd16ded0&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;chis7&quot;,
+    &quot;repository&quot;: &quot;zaneqas_project&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/zaneqas_addons/zaneqas_tb/models/zaneqasTbXpertEqaResults.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/zaneqas_addons/zaneqas_tb/report/gene_xpert_eqa_results_template.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2lgkYmocOVol1InGPiHrxxC356q" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.cc.executor": "Debug",
+    "Python.odoo-bin.executor": "Debug",
+    "Python.zaneqas.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "sync-to-repo__dev",
+    "last_opened_file_path": "/home/chisenga/zaneqas",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="C:\zaneqas\zaneqas_addons\renal\static\description" />
+      <recent name="C:\zaneqas\zaneqas_addons\renal\static\src\img" />
+      <recent name="C:\zaneqas\zaneqas_addons" />
+      <recent name="C:\zaneqas\zaneqas_addons\zaneqas_tb\static\src\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/zaneqas_addons" />
+      <recent name="C:\zaneqas\addons" />
+      <recent name="C:\zaneqas\zaneqas_addons" />
+      <recent name="C:\zaneqas" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="cc" type="PythonConfigurationType" factoryName="Python">
+      <module name="zaneqas" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.10 (zaneqas)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/odoo-bin" />
+      <option name="PARAMETERS" value="-c conf/zaneqas.conf" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" url="http://localhost:8069" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="62d1e3f0-886e-4056-873f-a7b089b3fb6e" name="Changes" comment="" />
+      <created>1725609163748</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725609163748</updated>
+      <workItem from="1725609165474" duration="18000" />
+      <workItem from="1725611259834" duration="3694000" />
+      <workItem from="1725634951780" duration="621000" />
+      <workItem from="1725635647290" duration="709000" />
+      <workItem from="1725697458240" duration="524000" />
+      <workItem from="1725697991358" duration="483000" />
+      <workItem from="1725698479543" duration="1195000" />
+      <workItem from="1725700355914" duration="677000" />
+      <workItem from="1725701044312" duration="467000" />
+      <workItem from="1725701525768" duration="1022000" />
+      <workItem from="1725702562420" duration="11051000" />
+      <workItem from="1725784794033" duration="2779000" />
+      <workItem from="1725791294194" duration="4382000" />
+      <workItem from="1725796103274" duration="3261000" />
+      <workItem from="1725865893079" duration="20595000" />
+      <workItem from="1725949779823" duration="3045000" />
+      <workItem from="1725955643008" duration="14007000" />
+      <workItem from="1725971586012" duration="5615000" />
+      <workItem from="1725977526922" duration="673000" />
+      <workItem from="1725978218839" duration="2802000" />
+      <workItem from="1726036148914" duration="349000" />
+      <workItem from="1726037280741" duration="9179000" />
+      <workItem from="1726123559616" duration="32837000" />
+      <workItem from="1726156812724" duration="598000" />
+      <workItem from="1726211782646" duration="987000" />
+      <workItem from="1726212779004" duration="264000" />
+      <workItem from="1726213054441" duration="46086000" />
+      <workItem from="1726469296396" duration="3105000" />
+      <workItem from="1726472419359" duration="31000" />
+      <workItem from="1726472493804" duration="21798000" />
+      <workItem from="1726563563466" duration="20406000" />
+      <workItem from="1726650914783" duration="19358000" />
+      <workItem from="1726727536461" duration="17775000" />
+      <workItem from="1726747984183" duration="6119000" />
+      <workItem from="1726820346568" duration="10104000" />
+      <workItem from="1726892121646" duration="1289000" />
+      <workItem from="1727000288034" duration="3370000" />
+      <workItem from="1727073138795" duration="25449000" />
+      <workItem from="1727159807578" duration="20440000" />
+      <workItem from="1727246558675" duration="16687000" />
+      <workItem from="1727312654447" duration="643000" />
+      <workItem from="1727313315354" duration="8946000" />
+      <workItem from="1727333433339" duration="14205000" />
+      <workItem from="1727357358110" duration="942000" />
+      <workItem from="1727419537286" duration="6823000" />
+      <workItem from="1727682372149" duration="5303000" />
+      <workItem from="1727764945359" duration="12670000" />
+      <workItem from="1727781132924" duration="336000" />
+      <workItem from="1727786807184" duration="6281000" />
+      <workItem from="1728167598782" duration="19173000" />
+      <workItem from="1728293594634" duration="25293000" />
+      <workItem from="1728399566775" duration="5705000" />
+      <workItem from="1728419699876" duration="19000" />
+      <workItem from="1728544021058" duration="3164000" />
+      <workItem from="1728547884719" duration="2852000" />
+      <workItem from="1728631455966" duration="3939000" />
+      <workItem from="1728636664064" duration="3395000" />
+      <workItem from="1728656890700" duration="6701000" />
+      <workItem from="1728827486237" duration="9092000" />
+      <workItem from="1728901530210" duration="26000" />
+      <workItem from="1728910371424" duration="605000" />
+      <workItem from="1728927726702" duration="8242000" />
+      <workItem from="1729148301888" duration="751000" />
+      <workItem from="1729584592001" duration="13245000" />
+      <workItem from="1729666564605" duration="13520000" />
+      <workItem from="1729946814154" duration="13250000" />
+      <workItem from="1729960116560" duration="3210000" />
+      <workItem from="1729963515189" duration="1017000" />
+      <workItem from="1729964676800" duration="2229000" />
+      <workItem from="1729969964735" duration="293000" />
+      <workItem from="1729970266438" duration="21484000" />
+      <workItem from="1730029672652" duration="7390000" />
+      <workItem from="1730104547043" duration="614000" />
+      <workItem from="1730185397471" duration="20324000" />
+      <workItem from="1730273381526" duration="3833000" />
+      <workItem from="1730445051099" duration="962000" />
+      <workItem from="1730465285855" duration="444000" />
+      <workItem from="1730505749067" duration="4102000" />
+      <workItem from="1730509893090" duration="8587000" />
+      <workItem from="1730701843996" duration="30923000" />
+      <workItem from="1730786298548" duration="35408000" />
+      <workItem from="1730874091821" duration="14230000" />
+      <workItem from="1730900213320" duration="1205000" />
+      <workItem from="1731237578705" duration="2556000" />
+      <workItem from="1731241378200" duration="49159000" />
+      <workItem from="1731402943347" duration="6957000" />
+      <workItem from="1731478723970" duration="12516000" />
+      <workItem from="1731565072776" duration="14000" />
+      <workItem from="1731565225362" duration="32000" />
+      <workItem from="1731622009762" duration="78000" />
+      <workItem from="1731622792468" duration="482000" />
+      <workItem from="1731675329534" duration="923000" />
+      <workItem from="1731819529225" duration="5000" />
+      <workItem from="1731927554154" duration="189000" />
+      <workItem from="1732259715520" duration="5285000" />
+      <workItem from="1733247766802" duration="3476000" />
+      <workItem from="1733319304122" duration="34000" />
+      <workItem from="1736341722381" duration="5220000" />
+      <workItem from="1736426927781" duration="1871000" />
+      <workItem from="1736495433314" duration="88000" />
+      <workItem from="1742371797638" duration="3082000" />
+      <workItem from="1742377170460" duration="39000" />
+      <workItem from="1742377660178" duration="3857000" />
+      <workItem from="1742460294759" duration="8000" />
+    </task>
+    <task id="LOCAL-00001" summary="setting up repo">
+      <option name="closed" value="true" />
+      <created>1726753698713</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726753698713</updated>
+    </task>
+    <task id="LOCAL-00002" summary="syncing with repo">
+      <option name="closed" value="true" />
+      <created>1747219172168</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747219172168</updated>
+    </task>
+    <task id="LOCAL-00003" summary="syncing with repo">
+      <option name="closed" value="true" />
+      <created>1747222358573</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747222358573</updated>
+    </task>
+    <task id="LOCAL-00004" summary="syncing with repo">
+      <option name="closed" value="true" />
+      <created>1747222578799</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747222578799</updated>
+    </task>
+    <task id="LOCAL-00005" summary="syncing with repo">
+      <option name="closed" value="true" />
+      <created>1747235685572</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747235685572</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="setting up repo" />
+    <MESSAGE value="syncing with repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="syncing with repo" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/zaneqas$zaneqas.coverage" NAME="zaneqas Coverage Results" MODIFIED="1742378896181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zaneqas$odoo_bin.coverage" NAME="zaneqas Coverage Results" MODIFIED="1725983831056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:\zaneqas" />
+  </component>
+</project>
